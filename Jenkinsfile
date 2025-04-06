@@ -32,7 +32,7 @@ pipeline {
                     def ec2_user = "ubuntu"
                     def ec2_host = "3.80.21.217"
                     def jar_name = "petclinic-1.0-SNAPSHOT.jar"
-                    def pem_key = "~/.ssh/id_rsa"
+                    def pem_key = "/var/lib/jenkins/.ssh/id_rsa"
 
                     // Copy JAR to EC2
                     sh """
