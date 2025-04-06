@@ -4,16 +4,19 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/dipaktrivedi110/petclinic.git'
+                echo 'Cloning petclinic repo...'
+                git branch: 'main', url: 'https://github.com/dipaktrivedi110/petclinic.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                echo 'Building the app...'
+                sh 'mvn compile'
             }
         }
         stage('Test') {
             steps {
+                echo 'Running tests...'
                 sh 'mvn test'
             }
         }
