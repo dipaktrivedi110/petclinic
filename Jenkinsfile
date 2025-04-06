@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/petclinic.git'
+                git 'https://github.com/dipaktrivedi110/petclinic.git'
             }
         }
         stage('Build') {
